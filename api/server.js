@@ -44,7 +44,7 @@ app.listen(PORT, () => {
 ╔══════════════════════════════╗
 ║       FloX Web2APK           ║
 ╠══════════════════════════════╣
-║ API : http://localhost:${PORT} ║
+║ API : https://flox-api-docs.vercel.app${PORT} ║
 ╚══════════════════════════════╝
   `);
 });
