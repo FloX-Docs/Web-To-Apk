@@ -18,11 +18,12 @@ router.post(
         websiteUrl
       } = req.body;
 
-      const errors = validateInput({
-        file: req.file,
-        filename,
-        appName
-      });
+const errors = validateInput({
+  file: req.file,
+  filename,
+  appName,
+  websiteUrl
+});
 
       if (errors.length > 0) {
         if (req.file?.path) {
