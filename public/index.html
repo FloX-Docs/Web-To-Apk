@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>FloX Web2APK</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>FloX Web2APK</h1>
+
+    <p>
+      Website Menuju Aplikasi Android
+    </p>
+
+    <form id="buildForm">
+
+      <label>
+        URL Website
+      </label>
+
+      <input
+        type="url"
+        name="websiteUrl"
+        placeholder="https://example.com"
+        required
+      >
+
+      <label>
+        Foto Aplikasi
+      </label>
+
+      <input
+        type="file"
+        name="photo"
+        accept="image/jpeg,image/png,image/webp"
+        required
+      >
+
+      <small>
+        Wajib upload foto asli. URL gambar tidak diterima.
+      </small>
+
+      <label>
+        Nama File
+      </label>
+
+      <input
+        type="text"
+        name="filename"
+        placeholder="FloXID"
+        required
+      >
+
+      <label>
+        Nama Aplikasi
+      </label>
+
+      <input
+        type="text"
+        name="appName"
+        placeholder="FloXID"
+        required
+      >
+
+      <button type="submit">
+        BUAT APK
+      </button>
+
+    </form>
+
+    <div id="result"></div>
+
+  </main>
+
+  <script src="/app.js"></script>
+
+</body>
+</html>
