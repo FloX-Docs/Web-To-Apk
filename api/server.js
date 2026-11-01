@@ -7,14 +7,13 @@ const buildRouter = require("./routes/build");
 
 const app = express();
 
-const PORT = Number(
-  process.env.PORT || 3000
-);
-
 app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
-}));
+
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
 
 app.use(
   express.static(
@@ -23,7 +22,7 @@ app.use(
 );
 
 app.get("/api", (req, res) => {
-  res.json({
+  res.status(200).json({
     name: "FloX Web2APK API",
     version: "1.0.0",
     status: "online"
@@ -39,12 +38,4 @@ app.use((req, res) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`
-╔══════════════════════════════╗
-║       FloX Web2APK           ║
-╠══════════════════════════════╣
-║ API : https://flox-api-docs.vercel.app${PORT} ║
-╚══════════════════════════════╝
-  `);
-});
+module.exports = app;
